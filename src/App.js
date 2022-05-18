@@ -1,25 +1,63 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState} from "react";
+import * as CC from "./components/Main/styles";
+import GlobalStyle from "./styled/GlobalStyle";
+import { Header, HeaderTitle } from "./styled/Header";
+import TableArea from "./components/Main/TableArea/TableArea";
+import { Items } from "./Data/Items";
+import Resume from "./components/Main/Resume";
+import { Categories } from "./Data/Categories";
+import InputArea from "./components/Main/InputArea/InputArea";
+
 
 function App() {
+
+  const [receita, setReceita]= useState(0)
+  const [expense, setExpense]= useState(0)
+  const [list, setList] = useState(Items)
+  
+  function handleAdd(newItem){
+    setList([...list, newItem])
+    console.log(list)
+  }
+  function handleRemove(index){
+    
+     let listRemoved = list.splice(index, 1)
+     setList([...list, listRemoved])
+    
+  }
+
+  useEffect(()=>{
+   let receitaCount = 0 
+   let expenseCount = 0 
+    for(let i in list){
+      if(Categories[list[i].Category].expense){
+        expenseCount += list[i].Value
+      }else{
+        receitaCount += list[i].Value
+      }
+    }
+    setReceita(receitaCount)
+    setExpense(expenseCount)
+
+  },[list])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <GlobalStyle />
+
+    <Header>
+      <HeaderTitle>Sistema Financeiro</HeaderTitle>
+    </Header>
+    <CC.Main>
+    <Resume balance={receita - expense} list={list} receita={receita} expense={expense}></Resume>
+    <InputArea handleAdd={handleAdd}/>
+    <TableArea handleRemove={handleRemove} list={list}></TableArea>
+    </CC.Main>
+    
+    
     </div>
   );
+
 }
 
 export default App;
