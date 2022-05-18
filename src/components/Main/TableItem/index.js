@@ -16,10 +16,6 @@ export default function TableItem(props) {
                 $ {props.item.Value}
                 </C.Value>
             </C.TableColumn>
-            <C.RemoveButton onClick={()=>{
-                props.handleRemove(props.index)
-            }}>Remove</C.RemoveButton>
-        
       </C.TableLine> 
 
 

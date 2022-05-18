@@ -16,6 +16,3 @@ export const Category = styled.div`
 export const Value = styled.div`
     color: ${props=> props.color};
 `
-export const RemoveButton = styled.button`
-
-`

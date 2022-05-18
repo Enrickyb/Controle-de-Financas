@@ -16,7 +16,7 @@ export default function TableArea(props) {
         </thead>
         <tbody>
             {props.list.map((item, index)=>(
-                <TableItem index={index} item={item} key={index} handleRemove={props.handleRemove} list={props.list}></TableItem>
+                <TableItem index={index} item={item} key={index}></TableItem>
             ))}
         </tbody>
 

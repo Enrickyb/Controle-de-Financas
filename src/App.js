@@ -15,16 +15,12 @@ function App() {
   const [expense, setExpense]= useState(0)
   const [list, setList] = useState(Items)
   
+
   function handleAdd(newItem){
     setList([...list, newItem])
-    console.log(list)
-  }
-  function handleRemove(index){
-    
-     let listRemoved = list.splice(index, 1)
-     setList([...list, listRemoved])
     
   }
+  
 
   useEffect(()=>{
    let receitaCount = 0 
@@ -51,7 +47,7 @@ function App() {
     <CC.Main>
     <Resume balance={receita - expense} list={list} receita={receita} expense={expense}></Resume>
     <InputArea handleAdd={handleAdd}/>
-    <TableArea handleRemove={handleRemove} list={list}></TableArea>
+    <TableArea list={list}></TableArea>
     </CC.Main>
     
     
