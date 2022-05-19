@@ -11,7 +11,8 @@ export const MainResume = styled.div`
      border-radius: 5px;
      width: 100%;
      height: 100px;
-     transform: translateY(-45px);
+     
+     
 `
 export const MainInputs = styled.div`
      background-color: #f2f2f2;
@@ -19,6 +20,7 @@ export const MainInputs = styled.div`
      border-radius: 5px;
      width: 100%;
      height: 100px;
+     
 `    
 export const MainDetails = styled.div`
      background-color: #f2f2f2;
@@ -27,5 +29,6 @@ export const MainDetails = styled.div`
      width: 100%;
      min-height: 100px;
      margin-top: 50px;
+     
 `
 

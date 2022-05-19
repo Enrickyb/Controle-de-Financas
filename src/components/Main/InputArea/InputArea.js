@@ -44,11 +44,11 @@ export default function InputArea(props) {
           setNumber(Number(e.target.value))
           
         }}></C.ValueInput>
-        <button onClick={(event)=>{
+        <C.addButton onClick={(event)=>{
           event.preventDefault()
           addItem()
           
-          }}>ADD</button>
+          }}>ADD</C.addButton>
       </C.form>
     </C.InputArea>
   )

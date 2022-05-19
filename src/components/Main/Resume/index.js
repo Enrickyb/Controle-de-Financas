@@ -7,21 +7,19 @@ export default function Resume(props) {
   return (
 
     <C.ResumeArea>
-        <C.DateSelect>
-            
-        </C.DateSelect>
+      
         <C.Revenue>
-            <div>Revenue</div>
-            <div>$ {props.receita}</div>
+            <div>Receita</div>
+            <div>R$ {props.receita}</div>
             
         </C.Revenue>
         <C.Expense>
-            <div>Expense</div>
-            <div>$ {props.expense}</div>  
+            <div>Despesa</div>
+            <div>R$ {props.expense}</div>  
         </C.Expense>
         <C.Balance color={props.balance > 0 ? 'green' : 'red'}>
-            <div>Balance</div>
-            <div>${props.balance}</div>
+            <div>Saldo</div>
+            <div>R${props.balance}</div>
         </C.Balance>
     </C.ResumeArea>
 

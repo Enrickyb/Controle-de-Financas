@@ -8,10 +8,10 @@ export default function TableArea(props) {
     <C.Table>
         <thead>
             <tr>
-              <C.TableHeadColumn width={100}>Date</C.TableHeadColumn>
-              <C.TableHeadColumn width={130}>Category</C.TableHeadColumn>
-              <C.TableHeadColumn>Title</C.TableHeadColumn>
-              <C.TableHeadColumn width={150}>Value</C.TableHeadColumn>
+              <C.TableHeadColumn width={100}>Data</C.TableHeadColumn>
+              <C.TableHeadColumn width={130}>Categoria</C.TableHeadColumn>
+              <C.TableHeadColumn>Tíulo</C.TableHeadColumn>
+              <C.TableHeadColumn width={150}>Valor</C.TableHeadColumn>
             </tr>
         </thead>
         <tbody>

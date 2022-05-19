@@ -7,6 +7,7 @@ export const ResumeArea = styled.div`
     padding: 20px;
     display: flex;
     justify-content: space-around;
+    margin-top: -35px;
 `
 export const Revenue = styled.div`
 

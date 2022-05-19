@@ -6,7 +6,7 @@ export const InputArea = styled.div`
     border-radius: 0%;
     padding: 20px;
     display: flex;
-    
+    margin-top: 10px;
 `
 export const form = styled.form`
     display: flex;
@@ -40,4 +40,14 @@ export const CategoryInput = styled.select`
     background-color: #f2f2f2;
     border-radius: 5px;
     padding: 5px;
+`
+export const addButton = styled.button`
+    border: none;
+    border-radius: 5px;
+    padding: 8px 14px; 
+    cursor: pointer;
+    box-shadow: 0px 0px 4px rgba(0,0,0, 0.4);
+    &&:hover{
+        background-color: rgb(220, 220, 220);
+    }
 `
